@@ -7,12 +7,16 @@ class SoundManager:
 
     def __init__(self):
         """Initialize the sound manager."""
-        pygame.mixer.init()
-        self.sounds_enabled = True
+        try:
+            pygame.mixer.init()
+            self.sounds_enabled = True
+        except:
+            self.sounds_enabled = False
         
         # Create simple sound effects using pygame.mixer.Sound
         # We'll generate simple tones for different actions
-        self._create_sounds()
+        if self.sounds_enabled:
+            self._create_sounds()
 
     def _create_sounds(self):
         """Create simple sound effects."""
