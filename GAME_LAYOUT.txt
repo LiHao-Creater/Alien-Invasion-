@@ -1,0 +1,92 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                      ALIEN INVASION - 外星人入侵                           ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+Game Screen Layout (1200x800 pixels):
+┌────────────────────────────────────────────────────────────────────────┐
+│ 🚀🚀🚀     Ships Left             HIGH SCORE: 5,000        Score: 2,350 │
+│                                   Level: 2                               │
+│                                                                          │
+│   👾 👾 👾 👾 👾 👾 👾 👾 👾 👾 👾                                        │
+│   👾 👾 👾 👾 👾 👾 👾 👾 👾 👾 👾    <- Alien Fleet                      │
+│   👾 👾 👾 👾 👾 👾 👾 👾 👾 👾 👾       (Green enemies)                  │
+│   👾 👾 👾 👾 👾 👾 👾 👾 👾 👾 👾                                        │
+│       |   |   |                                                          │
+│       ↓   ↓   ↓  (Red alien missiles)                                   │
+│                                                                          │
+│                                                                          │
+│           |   |   |                                                      │
+│           ↑   ↑   ↑  (Black player bullets)                             │
+│                                                                          │
+│                                                                          │
+│     🛡️   🛡️   🛡️   🛡️                                                  │
+│    ████ ████ ████ ████  <- Shields (Green, turn yellow/orange when hit)│
+│                                                                          │
+│                      🚀                                                  │
+│                    Player Ship (Blue triangle)                          │
+└────────────────────────────────────────────────────────────────────────┘
+
+Game Start Screen:
+┌────────────────────────────────────────────────────────────────────────┐
+│                                                                          │
+│                                                                          │
+│                        ALIEN INVASION                                    │
+│                         外星人入侵                                        │
+│                                                                          │
+│                                                                          │
+│                     ┌──────────────┐                                    │
+│                     │     PLAY     │  <- Click to start                 │
+│                     └──────────────┘                                    │
+│                                                                          │
+│                                                                          │
+│                   Controls:                                              │
+│                   ← → : Move Ship                                       │
+│                   SPACE : Fire Bullets                                   │
+│                   P : Start Game                                         │
+│                   Q : Quit                                               │
+│                                                                          │
+└────────────────────────────────────────────────────────────────────────┘
+
+Game Over Screen:
+┌────────────────────────────────────────────────────────────────────────┐
+│                                                                          │
+│                                                                          │
+│                        GAME OVER                                         │
+│                                                                          │
+│                   Your Score: 12,450                                     │
+│                   High Score: 15,000                                     │
+│                   Level Reached: 5                                       │
+│                                                                          │
+│                     ┌──────────────┐                                    │
+│                     │     PLAY     │  <- Click to restart                │
+│                     └──────────────┘                                    │
+│                                                                          │
+└────────────────────────────────────────────────────────────────────────┘
+
+Color Scheme:
+- Background: Light gray (230, 230, 230)
+- Player Ship: Blue (0, 150, 255) - Triangle shape
+- Aliens: Green (100, 255, 100) - Oval with eyes
+- Player Bullets: Dark gray (60, 60, 60) - Thin rectangles
+- Alien Bullets: Red (255, 0, 0) - Thin rectangles
+- Shields: 
+  * Full health: Green (0, 255, 0)
+  * Medium damage: Yellow-green (200, 255, 0)
+  * Heavy damage: Orange (255, 200, 0)
+- Text: Dark gray (30, 30, 30)
+- Button: Green (0, 255, 0) with white text
+
+Game Mechanics:
+1. Player can move left/right and fire up to 5 bullets at once
+2. Aliens move side-to-side, dropping down when hitting edges
+3. Aliens randomly fire bullets downward
+4. Shields protect player but degrade with each hit (3 hits = destroyed)
+5. Score increases with each alien destroyed (50 pts base, increases per level)
+6. Game speeds up after clearing each wave
+7. Player has 3 lives (ships)
+8. Game over when all lives lost
+
+Sound Effects:
+- 🔊 Shoot: High-pitched tone (440 Hz) when firing
+- 💥 Explosion: Mid-pitched tone (220 Hz) when alien destroyed
+- 💔 Hit: Mid-high tone (330 Hz) when ship takes damage
